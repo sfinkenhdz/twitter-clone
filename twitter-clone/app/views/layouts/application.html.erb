@@ -21,7 +21,9 @@
     <div class="icon-container">@<%= current_user.username %></div>
     <div class="icon-container"><%= link_to "Logout", logout_path %></div>
     <div class="icon-container">
-      <%= image_tag "compose.png" %>
+      <%= link_to new_tweet_path do %>
+        <%= image_tag "compose.png" %>
+      <% end %>
     </div>
     <% else %>
       <div>Have an account? <%= link_to "Log in", login_path %></div>
