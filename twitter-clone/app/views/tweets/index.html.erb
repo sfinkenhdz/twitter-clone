@@ -1,0 +1,36 @@
+<div>
+
+  <div class="left-container">
+    <div class="profile-container">
+      <div class="profile-top"></div>
+      <div class="profile-bottom"></div>
+    </div>
+    <div class="trends-container">
+      Trends
+      <% @hashtags.each do |tag| %>
+        <div class="indv-trend-container">
+          <%= tag.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="tweet-container-outer">
+    <div class="whats_happening">
+      <div class="whats_happ_inner">"What's happening?"
+      </div>
+    </div>
+    <% @tweets.each do |tweet| %>
+      <div class="indv_tweet_container">
+        <a class="tweet"><%= tweet.content %></a>
+        </div>
+        <% end %>
+
+  </div>
+
+  <div class="follow-container">
+    Who to Follow
+  </div>
+
+</div>
+

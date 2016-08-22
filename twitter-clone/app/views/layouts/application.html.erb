@@ -6,7 +6,29 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <nav>
+    <% if logged_in? %>
+    <div class="icon-container">
+      <%= link_to root_path do %>
+        <%= image_tag "home.png" %>
+      <% end %>
+    </div>
+    <div class="icon-container">
+      <%= image_tag "bird_blue.png" %>
+    </div>
+    <div class="icon-container">@<%= current_user.username %></div>
+    <div class="icon-container"><%= link_to "Logout", logout_path %></div>
+    <div class="icon-container">
+      <%= image_tag "compose.png" %>
+    </div>
+    <% else %>
+      <div>Have an account? <%= link_to "Log in", login_path %></div>
+      <div>Need an account? <%= link_to "Sign up", new_user_path %></div>
+    <% end %>
+  </nav>
+  <div class="spacer"></div>
 
 <%= yield %>
 
