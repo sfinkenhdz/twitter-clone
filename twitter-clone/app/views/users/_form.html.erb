@@ -1,12 +1,13 @@
 <%= form_for(@user, html: {multipart: true}) do |f| %>
-  <% if @user.errors.any? %>
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="errors">
+    <% if @user.errors.any? %>
+        <ul>
+        <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+        </ul>
+    <% end %>
+  </div>
 
   <div class="field">
     <%= f.label :full_name %><br>

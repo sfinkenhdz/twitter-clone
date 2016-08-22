@@ -17,7 +17,7 @@
 
   <div class="tweet-container-outer">
     <div class="whats_happening">
-      <div class="whats_happ_inner">"What's happening?"
+      <div class="whats_happ_inner"><%= link_to "What's happening?", new_tweet_path, class: "new_tweet" %>
       </div>
     </div>
     <% @tweets.each do |tweet| %>
