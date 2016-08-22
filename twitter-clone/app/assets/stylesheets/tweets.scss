@@ -1,0 +1,112 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.left-container {
+  display: inline-block;
+  float: left;
+  margin: 15px 15px 15px 5%;
+}
+
+.profile-container {
+  width: 250px;
+  height: 200px;
+}
+
+.profile-top {
+  width: 100%;
+  height: 100px;
+  border: solid thin #aab8c3;
+  background-color: #2579bb;
+  border-radius: 5px 5px 0 0;
+}
+
+.profile-bottom {
+  width: 100%;
+  height: 100px;
+  border: solid thin #aab8c3;
+  border-top: none;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.trends-container {
+  width: 250px;
+  height: 275px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid thin #aab8c3;
+  font-family: helvetica neue;
+  font-size: 18px;
+  color: #66747f;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.indv-trend-container {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.tweet-container-outer {
+  width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  min-height: 100px;
+}
+
+.whats_happening {
+  width: 100%;
+  height: 55px;
+  background-color: #e9f1f9;
+  border: solid thin #aab8c3;
+  border-radius: 5px 5px 0 0;
+}
+
+.whats_happ_inner {
+  width: 80%;
+  height: 40px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 5px;
+  border: solid thin #aab8c3;
+  color: #2579bb;
+  font-family: helvetica neue;
+  padding: 12px 5px 5px 7px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.indv_tweet_container {
+  display: block;
+
+  border-top: none;
+  padding: 5px;
+  min-height: 75px;
+}
+
+.indv_tweet_container:hover {
+  background-color: #f5f8fa;
+}
+
+.follow-container {
+  width: 250px;
+  min-height: 275px;
+  display: inline-block;
+  margin: 15px 5% 15px 5px;
+  float: right;
+  background-color: white;
+  border-radius: 5px;
+  border: solid thin #aab8c3;
+  font-family: helvetica neue;
+  font-size: 18px;
+  color: #66747f;
+  padding: 10px;
+}
+
+.tweet {
+  display: inline-block;
+  margin-left: 5px;
+}
