@@ -22,8 +22,8 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
   </div>
   <div>
     <% if @user.image.exists? %>
