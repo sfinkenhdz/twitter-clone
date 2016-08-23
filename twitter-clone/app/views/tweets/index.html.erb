@@ -8,7 +8,7 @@
       <div class="profile-bottom"></div>
     </div>
     <div class="trends-container">
-      Trends
+      <header>Trends</header>
       <% @hashtags.each do |tag| %>
         <div class="indv-trend-container">
           <%= tag.name %>
@@ -30,12 +30,34 @@
         <a class="tweet"><%= tweet.content %></a>
         </div>
         <% end %>
-
   </div>
 
-  <div class="follow-container">
-    Who to Follow
+<div class="follow-container">
+    <header>Who to Follow</header>
+    <div>
+      <% @users.each do |user| %>
+        <% unless user == current_user %>
+        <div class="indv-user-container">
+          <div class="user_details">@<%= user.username %></div>
+          <div class="icon-container">
+            <%= image_tag(user.image.url) %>
+          </div>
+            <%= form_for(@following) do |f| %>
+              <div class="field">
+                <%= hidden_field_tag(:follower_id, current_user.id) %>
+              </div>
+              <div class="field">
+                <%= hidden_field_tag(:followed_id, user.id) %>
+              </div>
+              <div class="field">
+                <%= f.submit "Follow" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
   </div>
+
 
 </div>
 

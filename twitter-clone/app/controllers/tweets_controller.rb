@@ -3,6 +3,8 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all
     @hashtags = Hashtag.all
+    @users = User.all - current_user.followeds
+    @following = Following.new
   end
 
   def new
@@ -26,7 +28,7 @@ class TweetsController < ApplicationController
 
   def tweet_params
       params.require(:tweet).permit(:content, :image)
-    end
+  end
 
 end
 
