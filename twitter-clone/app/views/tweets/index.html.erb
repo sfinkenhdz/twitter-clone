@@ -1,9 +1,11 @@
 <div>
 
+<% if logged_in? %>
   <div class="left-container">
     <div class="profile-container">
       <div class="profile-top"></div>
-      <div class="med-icon-container"><%= image_tag current_user.image.url %>
+      <div class="med-icon-container">
+        <%= image_tag current_user.image.url %>
       </div>
       <div class="profile-bottom"></div>
     </div>
@@ -57,7 +59,10 @@
         </div>
       <% end %>
   </div>
-
+<% else %>
+  <div class="spacer"></div>
+  <div>Need an account? <%= link_to "Sign up", new_user_path %></div>
+<% end %>
 
 </div>
 
