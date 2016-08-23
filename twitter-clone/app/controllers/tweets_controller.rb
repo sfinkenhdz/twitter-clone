@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
-    @hashtags = Hashtag.all
+    @hashtags = Hashtag.order('count').limit(5)
     @users = User.all - current_user.followeds
     @following = Following.new
   end
