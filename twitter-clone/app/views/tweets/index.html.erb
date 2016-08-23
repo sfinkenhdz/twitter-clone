@@ -3,6 +3,8 @@
   <div class="left-container">
     <div class="profile-container">
       <div class="profile-top"></div>
+      <div class="med-icon-container"><%= image_tag current_user.image.url %>
+      </div>
       <div class="profile-bottom"></div>
     </div>
     <div class="trends-container">
@@ -22,6 +24,9 @@
     </div>
     <% @tweets.each do |tweet| %>
       <div class="indv_tweet_container">
+        <div class="icon-container">
+          <%= image_tag(tweet.creator.image.url) %>
+        </div>
         <a class="tweet"><%= tweet.content %></a>
         </div>
         <% end %>
