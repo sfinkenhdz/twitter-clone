@@ -18,7 +18,7 @@
     <div class="icon-container">
       <%= image_tag "bird_blue.png" %>
     </div>
-    <div class="icon-container">@<%= current_user.username %></div>
+    <div class="icon-container"><%= image_tag current_user.image.url %></div>
     <div class="icon-container"><%= link_to "Logout", logout_path %></div>
     <div class="icon-container">
       <%= link_to new_tweet_path do %>
