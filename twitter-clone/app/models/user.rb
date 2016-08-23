@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
   has_many :followed_follows, foreign_key: :follower_id, class_name: "Following"
   has_many :followeds, through: :followed_follows, source: :followed
   has_many :tweets, foreign_key: :creator_id
+
+
 end
