@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
-    @hashtags = Hashtag.order('count').limit(5)
+    @hashtags = Hashtag.order('count').reverse_order.limit(5)
     if current_user
       @users = User.all - current_user.followeds
     end
@@ -16,6 +16,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     @tweet.creator_id = current_user.id
+    @tweet.increment_hashtag
     @tweet.retweet_count = 0
     @tweet.like_count = 0
 
