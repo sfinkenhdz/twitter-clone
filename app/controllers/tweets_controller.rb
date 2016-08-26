@@ -11,6 +11,7 @@ class TweetsController < ApplicationController
 
   def new
     @tweet = Tweet.new
+    render :"/tweets/new", layout: false if request.xhr?
   end
 
   def create
