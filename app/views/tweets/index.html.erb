@@ -3,7 +3,12 @@
 <% if logged_in? %>
   <div class="left-container">
     <div class="profile-container">
-      <div class="profile-top"></div>
+      <div class="profile-top">
+        <div class="profile-details">
+          <p class="name"><%= current_user.full_name %></p>
+          <p class="username">@<%= current_user.username %></p>
+        </div>
+      </div>
       <div class="med-icon-container">
         <%= image_tag current_user.image.url %>
       </div>

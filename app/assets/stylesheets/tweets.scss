@@ -118,7 +118,7 @@
   overflow: hidden;
   border-radius: 5px;
   position:absolute;
-  top: 100px;
+  top: 95px;
   margin: 15px;
 }
 
@@ -188,18 +188,15 @@
 .user-activity-container {
   height: 100%;
   width: 100%;
-  background-color: red;
+  margin-left: 5px;
 }
 
 .user-activity {
-  height: 30%;
-  width: 30%;
-  background-color: blue;
+  width: 75px;
   display: inline-block;
-  border-left: solid thin #aab8c3;
-  padding: 8px;
-  margin: 2px;
-  margin-top: 40px;
+  margin: 1px;
+  margin-bottom: 0px;
+  margin-top: 30px;
   color: #aab8c3;
   font-size: 10px;
 
@@ -207,9 +204,25 @@
 
 .activity {
   font-weight: bold;
-  height: 30%;
-  width: 30%;
-  color: #aab8c3;
-  background-color: green;
+  width: 75px;
+  display: inline-block;
+  margin: 1px;
+  margin-left: 2px;
+  margin-top: 0px;
+  font-size: 18px;
+  color: #2579bb;
+}
 
+.profile-details {
+  width: 140px;
+  margin: 35px 0 0 100px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.username {
+  font-size: 12px;
 }
