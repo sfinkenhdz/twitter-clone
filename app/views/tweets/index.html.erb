@@ -7,7 +7,16 @@
       <div class="med-icon-container">
         <%= image_tag current_user.image.url %>
       </div>
-      <div class="profile-bottom"></div>
+      <div class="profile-bottom">
+        <div class="user-activity-container">
+          <span class="user-activity">TWEETS</span>
+          <span class="user-activity">FOLLOWING</span>
+          <span class="user-activity">FOLLOWERS</span>
+          <span class="activity"><%=current_user.tweets.count%></span>
+          <span class="activity"><%=current_user.followeds.count%></span>
+          <span class="activity"><%=current_user.followers.count%></span>
+        </div>
+      </div>
     </div>
     <div class="trends-container">
       <header>Trends</header>
@@ -26,12 +35,24 @@
     </div>
     <% @tweets.each do |tweet| %>
       <div class="indv_tweet_container">
-        <div class="icon-container">
+        <div class="sm_profile_pic_container">
           <%= image_tag(tweet.creator.image.url) %>
         </div>
-        <div class="tweet"><%= tweet.content %></div>
+        <div class="tweet_details">
+          <span><%= tweet.creator.full_name %></span>
+          <span>@<%= tweet.creator.username %></span>
+          <span>|</span>
+          <span><%= tweet.time_ago %></span>
         </div>
+        <div class="tweet"><a class="tweet"><%= tweet.content %>
+        </a></div>
+        <% if tweet.image_file_name != nil %>
+          <div class="tweet-image-container">
+          <%= image_tag(tweet.image.url) %>
+          </div>
         <% end %>
+      </div>
+    <% end %>
   </div>
 
 <div class="follow-container">
