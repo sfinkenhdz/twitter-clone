@@ -22,8 +22,25 @@ class Tweet < ActiveRecord::Base
         found_tag.save
       end
     end
+  end
+
+  def time_ago
+    @time = ""
+    minutes_since_creation = ((Time.zone.now - self.created_at) / 60).to_i
+
+    if minutes_since_creation < 60
+      @time << minutes_since_creation.to_s
+      @time << "m"
+    elsif minutes_since_creation >= 60 && minutes_since_creation < 1440
+      @time << ((minutes_since_creation/60).to_i).to_s
+      @time << "h"
+    else
+      @time << ((minutes_since_creation/1440).to_i).to_s
+      @time << "d"
+    end
 
   end
+
 
 end
 
