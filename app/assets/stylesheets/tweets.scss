@@ -59,10 +59,11 @@
 
 .whats_happening {
   width: 100%;
-  height: 55px;
+  min-height: 55px;
   background-color: #e9f1f9;
   border: solid thin #aab8c3;
   border-radius: 5px 5px 0 0;
+  padding: 5px;
 }
 
 .whats_happ_inner {
@@ -226,3 +227,13 @@
 .username {
   font-size: 12px;
 }
+
+.new-tweet-content {
+  height: 100px;
+  width:  100%;
+}
+
+.whats_happening label {
+  font-size: 10px;
+}
+
